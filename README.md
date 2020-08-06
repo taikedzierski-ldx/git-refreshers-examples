@@ -1,4 +1,4 @@
-# A readme file
+# A Readme file
 
 This is a README file. It is written in Markdown.
 
