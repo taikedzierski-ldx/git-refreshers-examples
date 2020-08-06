@@ -1,6 +1,6 @@
 # A readme file
 
-This is a README file. It is written in mark down.
+This is a README file. It is written in markdown.
 
 View it in HTML using
 
