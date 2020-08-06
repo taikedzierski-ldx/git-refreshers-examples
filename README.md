@@ -1,9 +1,9 @@
 # A readme file
 
-This is a README file. It is written in markdown.
+This is a README file. It is written in Markdown.
 
 View it in HTML using
 
-* a markdown viewer
-* a markdown processor like `python -m markdown < README.md > README.html`
+* a Markdown viewer
+* a Markdown processor like `python -m markdown < README.md > README.html`
 * Directly on Github
