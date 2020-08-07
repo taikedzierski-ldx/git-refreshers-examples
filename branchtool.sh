@@ -24,7 +24,7 @@ main() {
             git log --oneline --graph --decorate=short --all
             ;;
         all)
-            git branch -vv
+            (git branch -r --no-color; git branch --no-color)|sed -r 's/^[ *]*//'
         count)
             local lines
             lines="$(git log --oneline | wc -l)"
