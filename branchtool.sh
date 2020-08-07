@@ -23,6 +23,8 @@ main() {
         graph)
             git log --oneline --graph --decorate=short --all
             ;;
+        all)
+            git branch -vv
         count)
             local lines
             lines="$(git log --oneline | wc -l)"
