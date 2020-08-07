@@ -11,6 +11,10 @@ checkhelp() {
     fi
 }
 
+show_branches() {
+    (git branch -r --no-color; git branch --no-color)|sed -r 's/^[ *]*//'
+}
+
 main() {
     checkhelp "$@"
 
@@ -24,7 +28,11 @@ main() {
             git log --oneline --graph --decorate=short --all
             ;;
         all)
-            (git branch -r --no-color; git branch --no-color)|sed -r 's/^[ *]*//'
+            echo "Remote branches"
+            show_branches | grep '/'
+
+            echo "Local branches"
+            show_branches | grep -v '/'
         count)
             local lines
             lines="$(git log --oneline | wc -l)"
