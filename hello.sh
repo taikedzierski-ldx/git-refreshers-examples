@@ -1,5 +1,9 @@
 #! bash
 
-echo "Hello world"
+## Some text in special comments
+##
+## Written out
 
-cat "$0"
+grep -E '^##' "$0"
+
+echo "Hello world"
