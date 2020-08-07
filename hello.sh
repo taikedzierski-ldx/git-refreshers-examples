@@ -1,9 +1,30 @@
 #! bash
 
-## Some text in special comments
+## I am a hello world script
 ##
-## Written out
+## What did you expect?
+##
+## OK. Try using --dump
 
-grep -E '^##' "$0"
+checkhelp() {
+    if [[ "$*" =~ --help ]]; then
+        grep -E '^##' "$0"
+        exit
+    fi
+}
 
-echo "Hello world"
+dump() {
+    if [[ "$*" =~ --dump ]]; then
+        cat "$0"
+        exit
+    fi
+}
+
+main() {
+    checkhelp "$@"
+    dump "$@"
+
+    echo "Hello world"
+}
+
+main "$@"
